@@ -9,9 +9,16 @@ footer, header {
     height: 80px;
     background: #fafafa;
     border-top: solid 1px #eee;
-  }
-
+}
 
 header .container {
     padding: 2em;
+}
+
+input:focus:required:invalid {
+    border: 2px solid red;
+}
+  
+input:required:valid {
+    border: 2px solid black;
 }

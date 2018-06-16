@@ -12,14 +12,14 @@ function siteVersion()
 
 function pageTitle()
 {
-    $page = isset($_GET['page']) ? htmlspecialchars($_GET['page']) : 'Home';
+    $page = isset($_GET['page']) ? htmlspecialchars($_GET['page']) : 'Products';
 
     echo ucwords(str_replace('-', ' ', $page));
 }
 
 function pageContent()
 {
-    $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+    $page = isset($_GET['page']) ? $_GET['page'] : 'products';
 
     $path = getcwd().'/'.config('content_path').'/'.$page.'.php';
 
@@ -38,10 +38,10 @@ function run()
 function initProducts() {
     return $products = [
         ['title' => '3/4" MDF Panel', 'description' => 'Only the best!', 'price' => 32.95, 'quantity' => 7, 'image' => '34mdfPanel.jpg'],
-        ['title' => 'Quarter Sawn Oak Door', 'description' => 'This is a true beauty.', 'price' => 87.36, 'quantity' => 18, 'image' => 'qsDoor.jpg'],
-        ['title' => 'Ebony Edge Banding', 'description' => 'Give it that missing pop.', 'price' => 17.89, 'quantity' => 8, 'image' => 'ebonyBanding.jpg'],
+        ['title' => 'Quarter Sawn Oak Door', 'description' => 'This is a true beauty.', 'price' => 87.36, 'quantity' => 18, 'image' => 'qsoDoor.jpg'],
+        ['title' => 'Ebony Edge Banding', 'description' => 'Give it that missing pop.', 'price' => 17.89, 'quantity' => 8, 'image' => 'eeBanding.jpg'],
         ['title' => 'Soft Close Hinges - 25 pc.', 'description' => 'Never slam them again!', 'price' => 75.48, 'quantity' => 13, 'image' => 'scHinge.jpg'],
-        ['title' => 'Bronze Handle', 'description' => 'Strong and gorgeous!', 'price' => 3.00, 'quantity' => 58, 'image' => 'bHanld.jpg'],
+        ['title' => 'Bronze Handle', 'description' => 'Strong and gorgeous!', 'price' => 3.00, 'quantity' => 58, 'image' => 'bHandle.jpg'],
     ];
 }
 function getProducts($products) {
